@@ -22,4 +22,3 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('newtask/', views.new_task, name="newtask")
 ]
-

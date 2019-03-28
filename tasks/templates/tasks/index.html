@@ -1,10 +1,14 @@
-{% for task in tasks %}
-<p>{{ task.title }} - Done: {{ task.is_done }}</p>
-{% endfor %}
+{% extends 'tasks/base.html' %}
 
-<form action="{% url 'tasks:newtask' %}" method="POST">
-  {% csrf_token %}
-  <input type="text" name="title">
-  <input type="submit" value="Create">
-</form>
+{% block content %}
+  {% for task in tasks %}
+  <p>{{ task.title }} - Done: {{ task.is_done }}</p>
+  {% endfor %}
+
+  <form action="{% url 'tasks:newtask' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="title">
+    <input type="submit" value="Create">
+  </form>
+{% endblock %}
 
