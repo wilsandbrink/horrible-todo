@@ -1,5 +1,13 @@
 from django.shortcuts import render, HttpResponse
+from .models import Task
 
 
 def index(request):
-    return HttpResponse("You're at the todo index")
+    tasks = Task.objects.all()
+
+    context = {
+        'tasks': tasks
+    }
+    template = 'tasks/index.html'
+
+    return render(request, template, context)
