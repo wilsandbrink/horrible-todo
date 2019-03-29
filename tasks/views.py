@@ -18,3 +18,10 @@ def new_task(request):
     new_task = Task(title = t)
     new_task.save()
     return HttpResponseRedirect(reverse('tasks:index'))
+
+
+def task_change(request, task_id):
+    task = Task.objects.get(pk=task_id)
+    task.is_done = not task.is_done
+    task.save()
+    return HttpResponseRedirect(reverse('tasks:index'))
