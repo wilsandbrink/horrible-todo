@@ -1,0 +1,13 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<h2>Log in</h2><hr>
+<form method="POST">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <button type="submit">Login</button>
+  <small>Need an account? <a href="#">Register</a></small>
+</form>
+{% endblock %}

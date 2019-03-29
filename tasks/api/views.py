@@ -6,4 +6,4 @@ from tasks.models import Task
 def index(request):
     tasks = Task.objects.all().values()
 
-    return JsonResponse({'tasks': list(tasks)})
+    return JsonResponse({'tasks': 'nothing here xddd'})
