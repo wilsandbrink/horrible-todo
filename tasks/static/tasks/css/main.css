@@ -13,6 +13,9 @@ nav.navbar {
     text-align: center;
     background: #0757b3;
     padding: 1rem 0.5rem;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 
 nav.navbar a {
@@ -48,8 +51,10 @@ div.logojk {
 }
 
 .task {
+    justify-content: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    display: flex;
 }
 
 form.taskform input.taskinput {
