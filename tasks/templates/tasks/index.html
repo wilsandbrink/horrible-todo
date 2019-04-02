@@ -2,23 +2,24 @@
 {% load static %}
 
 {% block content %}
-  {% for task in tasks %}
-    <div class="task">
-      <form action="{% url 'tasks:change' task.id %}" method="POST" id='{{ task.id }}'>
-        {% csrf_token %}
-        <p>{{ task.title }} - Done: <input type="checkbox" name="is_done" id="{{ task.id }}" value="{{ task.id }}" {% if task.is_done %} checked {% endif %} onchange="taskChange('{{ task.id }}')"> </p>
-      </form>
-    </div>
-  {% endfor %}
-
-  <form action="{% url 'tasks:newtask' %}" method="POST">
+  <form action="{% url 'tasks:newtask' %}" method="POST" class="taskform">
     {% csrf_token %}
     <input type="text" name="title">
     <input type="submit" value="Create">
   </form>
+  {% for task in tasks %}
+    <div class="task">
+      <form action="{% url 'tasks:change' task.id %}" method="POST" id='{{ task.id }}'>
+        {% csrf_token %}
+        <p>{{ task.title }} |
+          Done: <input type="checkbox" name="is_done" id="{{ task.id }}" value="{{ task.id }}" {% if task.is_done %} checked {% endif %} onchange="taskChange('{{ task.id }}')"></p>
+      </form>
+      <button class="taskdelb">Delete</button>
+    </div>
+  {% endfor %}
 {% endblock %}
 
 {% block js %}
-<script src="{% static 'tasks/js/taskchange.js' %}"></script>
+  <script src="{% static 'tasks/js/taskchange.js' %}"></script>
 {% endblock %}
 

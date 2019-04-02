@@ -1,0 +1,55 @@
+body {
+    font-family: 'Source Sans Pro';
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+nav.navbar {
+    background: rgb(9, 231, 83);
+    border-bottom: solid rgb(0, 123, 224) 0.2rem;
+    padding: 0.5rem 1rem;
+}
+
+nav.navbar a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: aliceblue;
+}
+
+nav.navbar a:hover {
+    background-color: rgb(10, 131, 50);
+    border-radius: 10%;
+    border-spacing: 5rem;
+    color: white;
+}
+
+.taskform {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.task {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.taskdelb {
+    background: red;
+    border: rgb(255, 77, 77) 0.2rem solid;
+    border-radius: 10%;
+    color: white;
+}
+
+.taskdelb:hover {
+    background: rgb(196, 0, 0);
+    border: rgb(252, 42, 42) 0.2rem solid;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+}

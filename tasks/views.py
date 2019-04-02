@@ -1,4 +1,6 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, reverse
+from django.contrib import messages
+
 from .models import Task
 
 
@@ -24,4 +26,13 @@ def task_change(request, task_id):
     task = Task.objects.get(pk=task_id)
     task.is_done = not task.is_done
     task.save()
+    return HttpResponseRedirect(reverse('tasks:index'))
+
+
+def task_delete(request, task_id):
+    task = Task.objects.get(pk=task_id)
+    task.delete()
+
+    messages.success(request, 'Task successfully deleted.')
+
     return HttpResponseRedirect(reverse('tasks:index'))
