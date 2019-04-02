@@ -5,7 +5,6 @@ body {
 }
 
 main {
-    padding: 1rem;
     text-align: center;
 }
 
@@ -31,6 +30,19 @@ nav.navbar a:hover {
     color: white;
 }
 
+div.logojk h1 {
+    padding-top: 0.01rem;
+    margin-top: 0;
+    color: white;
+}
+
+div.logojk {
+    border-bottom: solid rgb(197, 30, 30) 0.19rem;
+    background: rgb(51, 116, 160);
+    padding-top: 0.6rem;
+    margin-bottom: 1rem;
+}
+
 .taskform {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -39,6 +51,23 @@ nav.navbar a:hover {
 .task {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+
+form.taskform input.taskinput {
+    width: 40%;
+    height: 1.5rem;
+    border: 0.09rem solid rgb(68, 68, 68);
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+form.taskform input.tasksubmit {
+    padding: 0.35rem 1rem;
+    background: rgb(51, 116, 160);
+    color: white;
+    border: 0.09rem solid rgb(68, 68, 68);
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .taskdelb {

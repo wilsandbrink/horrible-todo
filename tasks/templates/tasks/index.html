@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block content %}
-  <h2>Todo-app</h2><hr>
+  <div class="logojk">
+    <h1>Todo-app</h1>
+  </div>
   <form action="{% url 'tasks:newtask' %}" method="POST" class="taskform">
     {% csrf_token %}
-    <input type="text" name="title">
-    <input type="submit" value="Create">
+    <input class="taskinput" type="text" name="title">
+    <input class="tasksubmit" type="submit" value="Create">
   </form>
   {% if tasks %}
     {% for task in tasks %}
