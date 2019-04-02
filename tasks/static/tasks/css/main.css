@@ -11,9 +11,9 @@ main {
 
 nav.navbar {
     text-align: center;
-    background: rgb(9, 231, 83);
-    border-bottom: solid rgb(56, 56, 56) 0.02rem;
-    padding: 0.5rem;
+    background: rgb(7, 87, 179);
+    border-bottom: solid rgb(197, 30, 30) 0.19rem;
+    padding: 1rem 0.5rem;
 }
 
 nav.navbar a {
@@ -23,7 +23,7 @@ nav.navbar a {
 }
 
 nav.navbar a:hover {
-    background-color: rgb(10, 131, 50);
+    background-color: rgb(14, 166, 212);
     border-radius: 10%;
     border-spacing: 5rem;
     color: white;
