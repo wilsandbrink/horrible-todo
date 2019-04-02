@@ -12,7 +12,7 @@ main {
 nav.navbar {
     text-align: center;
     background: rgb(9, 231, 83);
-    border-bottom: solid rgb(0, 123, 224) 0.2rem;
+    border-bottom: solid rgb(56, 56, 56) 0.02rem;
     padding: 0.5rem;
 }
 
