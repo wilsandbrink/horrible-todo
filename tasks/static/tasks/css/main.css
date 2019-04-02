@@ -12,7 +12,6 @@ main {
 nav.navbar {
     text-align: center;
     background: #0757b3;
-    border-bottom: solid #c51e1e 0.19rem;
     padding: 1rem 0.5rem;
 }
 
@@ -38,7 +37,6 @@ div.logojk h1 {
 }
 
 div.logojk {
-    border-bottom: solid #c51e1e 0.19rem;
     background: #3374a0;
     padding-top: 0.6rem;
     margin-bottom: 1rem;
