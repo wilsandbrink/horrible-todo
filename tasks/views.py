@@ -1,11 +1,13 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Task
 
 
+@login_required
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(author=request.user)
 
     context = {
         'tasks': tasks
@@ -18,6 +20,7 @@ def index(request):
 def new_task(request):
     t = request.POST['title']
     new_task = Task(title = t)
+    new_task.author = request.user
     new_task.save()
     return HttpResponseRedirect(reverse('tasks:index'))
 
