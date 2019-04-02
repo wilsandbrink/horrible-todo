@@ -4,12 +4,12 @@
 {% block content %}
   <div class="logojk">
     <h1>Todo-app</h1>
+    <form action="{% url 'tasks:newtask' %}" method="POST" class="taskform">
+      {% csrf_token %}
+      <input class="taskinput" type="text" name="title">
+      <input class="tasksubmit" type="submit" value="Create">
+    </form>
   </div>
-  <form action="{% url 'tasks:newtask' %}" method="POST" class="taskform">
-    {% csrf_token %}
-    <input class="taskinput" type="text" name="title">
-    <input class="tasksubmit" type="submit" value="Create">
-  </form>
   {% if tasks %}
     {% for task in tasks %}
       <div class="task">

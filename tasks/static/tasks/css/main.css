@@ -2,6 +2,7 @@ body {
     font-family: 'Source Sans Pro';
     margin: 0;
     padding: 0;
+    background: #f4f4f4;
 }
 
 main {
@@ -10,8 +11,8 @@ main {
 
 nav.navbar {
     text-align: center;
-    background: rgb(7, 87, 179);
-    border-bottom: solid rgb(197, 30, 30) 0.19rem;
+    background: #0757b3;
+    border-bottom: solid #c51e1e 0.19rem;
     padding: 1rem 0.5rem;
 }
 
@@ -24,7 +25,7 @@ nav.navbar a {
 }
 
 nav.navbar a:hover {
-    background-color: rgb(14, 166, 212);
+    background-color: #0ea6d4;
     border-radius: 10%;
     border-spacing: 5rem;
     color: white;
@@ -37,8 +38,8 @@ div.logojk h1 {
 }
 
 div.logojk {
-    border-bottom: solid rgb(197, 30, 30) 0.19rem;
-    background: rgb(51, 116, 160);
+    border-bottom: solid #c51e1e 0.19rem;
+    background: #3374a0;
     padding-top: 0.6rem;
     margin-bottom: 1rem;
 }
@@ -56,30 +57,31 @@ div.logojk {
 form.taskform input.taskinput {
     width: 40%;
     height: 1.5rem;
-    border: 0.09rem solid rgb(68, 68, 68);
+    padding-left: 0.5rem;
+    border: 0.09rem solid #444444;
     border-radius: 0.5rem;
     margin-right: 0.5rem;
 }
 
 form.taskform input.tasksubmit {
     padding: 0.35rem 1rem;
-    background: rgb(51, 116, 160);
+    background: #0daf3e;
     color: white;
-    border: 0.09rem solid rgb(68, 68, 68);
+    border: 0.09rem solid #0fd84b;
     border-radius: 0.5rem;
     margin-right: 0.5rem;
 }
 
 .taskdelb {
     background: red;
-    border: rgb(255, 77, 77) 0.2rem solid;
+    border: #ff4d4d 0.2rem solid;
     border-radius: 10%;
     color: white;
 }
 
 .taskdelb:hover {
-    background: rgb(196, 0, 0);
-    border: rgb(252, 42, 42) 0.2rem solid;
+    background: #c40000;
+    border: #fc2a2a 0.2rem solid;
 }
 
 @font-face {
