@@ -12,7 +12,16 @@
 </head>
 
 <body>
-  <nav class="navbar"><a href="{% url 'tasks:index' %}">Tasks</a></nav>
+  <nav class="navbar">
+    <a href="{% url 'tasks:index' %}">Tasks</a>
+    {% if user.is_authenticated %}
+      <a href="#">My account</a>
+      <a href="{% url 'users:logout' %}">Log out</a>
+    {% else %}
+      <a href="{% url 'users:login' %}">Log in</a>
+      <a href="#">Register</a>
+    {% endif %}
+  </nav>
   <main>
     {% if messages %}
       <ul class="messages">

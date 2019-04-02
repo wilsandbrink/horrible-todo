@@ -6,18 +6,20 @@ body {
 
 main {
     padding: 1rem;
+    text-align: center;
 }
 
 nav.navbar {
+    text-align: center;
     background: rgb(9, 231, 83);
     border-bottom: solid rgb(0, 123, 224) 0.2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
 }
 
 nav.navbar a {
     text-decoration: none;
-    font-size: 1.3rem;
-    color: aliceblue;
+    color: white;
+    margin-right: 2rem;
 }
 
 nav.navbar a:hover {

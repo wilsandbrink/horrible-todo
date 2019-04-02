@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+  <h2>Todo-app</h2><hr>
   <form action="{% url 'tasks:newtask' %}" method="POST" class="taskform">
     {% csrf_token %}
     <input type="text" name="title">
