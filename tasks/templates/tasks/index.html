@@ -12,14 +12,7 @@
   </div>
   {% if tasks %}
     {% for task in tasks %}
-      <div class="task">
-        <form action="{% url 'tasks:change' task.id %}" method="POST" id='{{ task.id }}'>
-          {% csrf_token %}
-          <p>{{ task.title }} |
-            Done: <input type="checkbox" name="is_done" id="{{ task.id }}" value="{{ task.id }}" {% if task.is_done %} checked {% endif %} onchange="taskChange('{{ task.id }}')"></p>
-        </form>
-        <button class="taskdelb">Delete</button>
-      </div>
+      {% include 'tasks/partials/task.html' %}
     {% endfor %}
   {% else %}
   <p>No tasks.</p>

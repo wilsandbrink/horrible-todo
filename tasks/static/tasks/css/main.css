@@ -6,7 +6,8 @@ body {
 }
 
 main {
-    text-align: center;
+    margin-left: 20rem;
+    margin-right: 20rem;
 }
 
 nav.navbar {
@@ -43,6 +44,9 @@ div.logojk {
     background: #3374a0;
     padding-top: 0.6rem;
     margin-bottom: 1rem;
+    text-align: center;
+    margin-left: -20rem;
+    margin-right: -20rem;
 }
 
 .taskform {
@@ -51,7 +55,6 @@ div.logojk {
 }
 
 .task {
-    justify-content: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: flex;
