@@ -37,6 +37,7 @@ def task_change(request, task_id):
     return HttpResponseRedirect(reverse('tasks:index'))
 
 
+@login_required
 @is_author
 def task_delete(request, task_id):
     task = Task.objects.get(pk=task_id)
