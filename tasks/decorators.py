@@ -5,6 +5,9 @@ from .models import Task
 
 
 def is_author(function):
+    """
+    Decorator view for checking if the current user owns the task.
+    """
     def wrap(request, *args, **kwargs):
         task = Task.objects.get(pk=kwargs['task_id'])
         if task.author == request.user:

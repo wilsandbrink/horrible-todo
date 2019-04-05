@@ -1,11 +1,11 @@
 {% extends 'tasks/base.html' %}
 
 {% block content %}
-<h2>Log in</h2><hr>
+<h2>Register</h2><hr>
 <form method="POST">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Register</button>
-  <small>Already have an account? <a href="{% url 'users:login' %}">Register</a></small>
+  <small>Already have an account? <a href="{% url 'users:login' %}">Login</a></small>
 </form>
 {% endblock %}

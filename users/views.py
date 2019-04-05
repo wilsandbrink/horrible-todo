@@ -12,11 +12,22 @@ def register(request):
             return redirect('tasks:index')
     else:
         form = UserCreationForm()
-    return render(request, 'users/register.html', {'form': form})
+
+    context = {
+        'form': form
+    }
+    template = 'users/register.html'
+
+    return render(request, template, context)
 
 
 @login_required
 def profile(request):
     user = request.user
 
-    return render(request, 'users/profile.html', {'user': user})
+    context = {
+        'user': user
+    }
+    template = 'users/profile.html'
+
+    return render(request, template, context)
