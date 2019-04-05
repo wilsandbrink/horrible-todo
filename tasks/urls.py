@@ -21,5 +21,6 @@ app_name = 'tasks'
 urlpatterns = [
     path('', views.index, name="index"),
     path('newtask/', views.new_task, name="newtask"),
-    path('setdone/<int:task_id>', views.task_change, name="change")
+    path('setdone/<int:task_id>', views.task_change, name="change"),
+    path('delete/<int:task_id>', views.task_delete, name="delete")
 ]

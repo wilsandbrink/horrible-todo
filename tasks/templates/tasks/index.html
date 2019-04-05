@@ -11,9 +11,16 @@
     </form>
   </div>
   {% if tasks %}
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>State</th>
+      <th>Delete</th>
+    </tr>
     {% for task in tasks %}
       {% include 'tasks/partials/task.html' %}
     {% endfor %}
+  </table>
   {% else %}
   <p>No tasks.</p>
   {% endif %}

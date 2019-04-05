@@ -9,7 +9,7 @@ from .models import Task
 
 @login_required
 def index(request):
-    tasks = Task.objects.filter(author=request.user)
+    tasks = Task.objects.filter(author=request.user).order_by('is_done')
 
     context = {
         'tasks': tasks

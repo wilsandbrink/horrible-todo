@@ -1,8 +1,16 @@
-<div class="task">
+<tr>
+  <td>
+      <p>{{ task.title }}</p>
+  </td>
+  <!--<div class="task">-->
+    <td>
   <form action="{% url 'tasks:change' task.id %}" method="POST" id='{{ task.id }}'>
     {% csrf_token %}
-    <p>{{ task.title }} |
-      Done: <input type="checkbox" name="is_done" id="{{ task.id }}" value="{{ task.id }}" {% if task.is_done %} checked {% endif %} onchange="taskChange('{{ task.id }}')"></p>
+      Done: <input type="checkbox" name="is_done" id="{{ task.id }}" value="{{ task.id }}" {% if task.is_done %} checked {% endif %} onchange="taskChange('{{ task.id }}')">
   </form>
-  <button class="taskdelb">Delete</button>
-</div>
+</td>
+<td>
+  <a class="taskdel" href="{% url 'tasks:delete' task.id %}">Delete</a>
+</td>
+  <!--</div>-->
+</tr>

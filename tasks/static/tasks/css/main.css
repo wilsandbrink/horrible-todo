@@ -85,6 +85,10 @@ form.taskform input.tasksubmit {
     color: white;
 }
 
+.taskdel {
+    margin-top: 16px;
+}
+
 .taskdelb:hover {
     background: #c40000;
     border: #fc2a2a 0.2rem solid;
