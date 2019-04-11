@@ -7,7 +7,6 @@ from .decorators import is_author
 from .models import Task
 
 # Todo: Learn how to comment code.
-# Todo: Add teams.
 
 @login_required
 def index(request):
