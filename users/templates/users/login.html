@@ -3,8 +3,10 @@
 {% block content %}
 <h2>Log in</h2><hr>
 <form method="POST">
-  {% csrf_token %}
-  {{ form.as_p }}
+  <table>
+    {% csrf_token %}
+    {{ form.as_table }}
+  </table>
   <button type="submit">Login</button>
   <small>Need an account? <a href="{% url 'users:register' %}">Register</a></small>
 </form>
