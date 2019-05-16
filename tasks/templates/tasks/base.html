@@ -17,6 +17,7 @@
 
 <body>
   <nav class="navbar">
+
     <ul>
       <li><a href="{% url 'tasks:index' %}">Tasks</a></li>
       {% if user.is_authenticated %}
@@ -27,15 +28,33 @@
         <li><a href="{% url 'users:register' %}">Register</a></li>
       {% endif %}
     </ul>
-  </nav>
-  <main class="content">
-    {% if messages %}
-      {% for message in messages %}
-        <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
-      {% endfor %}
-    {% endif %}
 
+  </nav>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <main class="container content">
     {% block content %}{% endblock %}
   </main>
+
+  <footer class="footer">
+
+      <div class="footer-item">
+        <p>&copy; 2019 <a href="https://github.com/wilsandbrink" target="_blank" rel="noopener noreferrer">wilsandbrink</a></p> 
+      </div>
+  
+      <div class="footer-item-right">
+        <nav class="social-links">
+          <a href="https://github.com/wilsandbrink/horrible-todo" class="social-link" target="_blank" rel="noopener noreferrer">
+            {% include 'tasks/partials/icons/github.html' %}
+          </a>
+        </nav>
+      </div>
+  
+    </footer>
 </body>
 </html>
